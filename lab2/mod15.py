@@ -99,7 +99,7 @@ for a in chosen_numbers:
         phase = decimal / 8 
         
         if phase > 0:
-            frac = frac(phase).limit(N)
+            frac = frac(phase).limit_denominator(N)
             r = frac.denominator
             if pow(a, r, N) == 1:
                 detected_periods.add(r)
